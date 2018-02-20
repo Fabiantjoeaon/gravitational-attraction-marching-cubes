@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    max-height: 100vh;
+}
+
+canvas {
+    -webkit-filter: url('#goo');
+    filter: url('#goo');
+}
