@@ -19,6 +19,93 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./dist/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Chivo" rel="stylesheet">
+
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes move {
+            from {
+
+                transform: translate3D(0px, 350px, 0px);
+            }
+
+            to {
+
+                transform: translate3D(0px, 0px, 0px);
+            }
+        }
+
+        body {
+            background-color: #000;
+            position: relative;
+
+        }
+
+        .text {
+            font-family: 'Chivo', sans-serif;
+            position: absolute;
+            color: #fff;
+            width: 80%;
+            top: 10px;
+            left: 0;
+            margin: 0 auto;
+
+            right: 0;
+            z-index: 1;
+
+            text-align: center;
+
+            animation: move 2s cubic-bezier(0.14, 1, 0.34, 1);
+            animation-delay: 1s;
+            transform: translate3D(0px, 350px, 0px);
+            animation-fill-mode: forwards;
+
+
+        }
+
+
+        .text h3,
+        .text a {
+            opacity: 0;
+
+        }
+
+        .text h3 {
+            font-size: 2em;
+            font-weight: 900;
+            animation: fadeIn 2s cubic-bezier(0.14, 1, 0.34, 1);
+            animation-delay: 0.6s;
+            animation-fill-mode: forwards;
+        }
+
+        .text a {
+            text-decoration: none;
+            color: #fff;
+            animation: fadeIn 1.3s cubic-bezier(0.14, 1, 0.34, 1);
+            animation-delay: 2s;
+            animation-fill-mode: forwards;
+        }
+
+        #root {
+            width: 100vw;
+            height: 100vh;
+            opacity: 0;
+            z-index: 0;
+
+            animation: fadeIn 1s cubic-bezier(0.14, 1, 0.34, 1);
+            animation-delay: 2s;
+            animation-fill-mode: forwards;
+        }
+    </style>
 </head>
 
 <body>
@@ -28,6 +115,10 @@
                     Please <a href="#">upgrade your browser</a> to improve your experience.
                 </p>
         <![endif]-->
+    <div class='text'>
+        <h3>Marching cubes algorithm + gravitational attraction</h3>
+        <a href="http://fabiantjoeaon.com/">Read more here</a>
+    </div>
     <div id="root"></div>
 
 
